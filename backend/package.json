@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "npx nodemon index.js"
+    "dev": "node index.js",
+    "postinstall": "chmod +x node_modules/.bin/nodemon"
   },
   "keywords": [],
   "author": "",
