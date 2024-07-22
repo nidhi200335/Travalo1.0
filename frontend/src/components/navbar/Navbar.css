@@ -1,0 +1,37 @@
+.navbar{
+    
+    height: 50px;
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navContainer{
+    width: 100%;
+    max-width: 1500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo{
+    font-weight: 500;
+  }
+  .githubLink {
+    margin-left: 1200px; /* Adjust space between buttons and GitHub link */
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .githubLink:hover {
+    text-decoration: underline;
+  }
+  .navButton{
+    margin-left: 20px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #003580;
+  }
