@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   console.log(user);
   return (
-    <div className="navbar">
+    <div className="navbar"> 
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
           <span className="logo">TravaLo</span>
@@ -26,7 +26,11 @@ const Navbar = () => {
           </div>
         ) : (
         <div className="navItems">
-            <button className="navButton">Register</button>
+            <button className="navButton">
+            <Link to="/register" style={{ color: "inherit", textDecoration: "none" }}>
+              <span className="button">Register</span>
+              </Link>  
+            </button>
             <button className="navButton">
               <Link to="/login" style={{ color: "inherit", textDecoration: "none" }}>
               <span className="button">Login</span>

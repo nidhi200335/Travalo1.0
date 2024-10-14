@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import hotelsRoute from "./routes/hotels.js";
 import usersRoute from "./routes/users.js";
 import roomsRoute from "./routes/rooms.js";
-
 import authRoute from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 
@@ -24,9 +23,9 @@ const connectDB =async()=>{
     }
 }
 mongoose.set('strictQuery', true);
-
 connectDB();
 
+// When strictQuery is set to true, Mongoose only allows fields that are defined in the Mongoose schema to be used in query filter
 
 
 
@@ -53,4 +52,17 @@ app.use(( err,req, res, next) => {
 app.listen(8800, () => {
    
     console.log("Server is running on port.");
-  });
+});
+
+
+
+
+
+
+
+
+
+// When a client (like a web browser or a mobile app) sends JSON data in a request (usually in a POST or PUT request), the server needs to read and understand that data. But by default, Express doesn't know how to read JSON data. That's where express.json() comes in.
+
+// It automatically reads the JSON data from the request body.
+// It parses (converts) the JSON into a JavaScript object so that you can easily work with it.

@@ -29,6 +29,13 @@ const SearchReducer = (state, action) => {
 export const SearchContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(SearchReducer, INITIAL_STATE);
 
+//   useReducer Hook:
+// This hook takes the reducer function (SearchReducer) and the initial state (INITIAL_STATE) as arguments.
+// It returns the current state (state) and a dispatch function (dispatch) to send actions to the reducer.
+// Providing State and Dispatch:
+// The provider component (SearchContext.Provider) wraps its children, making the state and dispatch function available to any ne
+//sted components that need them.
+// The value prop of SearchContext.Provider includes the current state properties (city, dates, options) and the dispatch function.
   return (
     <SearchContext.Provider
       value={{
